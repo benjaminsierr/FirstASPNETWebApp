@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My First ASP.NET Site</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/fav.png" / rel="icon">
+</head>
+<body>
+    <h1>Benjamin Sierra</h1>
+    <p>I hope to better learn how web applications are made and understand the underlying concepts of web development. Enterprise applications seem very indimidating and like there's always more to understand that you don't yet know. I hope to have at least some confidence going out into the world of web development feeling like I have a good idea of what's going on.</p>
+    <p>Some of the job I want when I graduate:</p>
+    <ol>
+        <li>Solutions Architect</li>
+        <li>Data Analyst</li>
+        <li>Business Systems Analyst</li>
+    </ol>
+    <img src="img/ski.png" />
+
+    <h2>Grade Calculator</h2>
+    <div id="grade">
+        <form>
+            <label>Assignments</label>
+            <input type="number" id="assignments" min="0" max="150">%
+            <br />
+            <br />
+            <label>Group Project</label>
+            <input type="number" id="group" min="0" max="150">%
+            <br />
+            <br />
+            <label>Quizzes</label>
+            <input type="number" id="quizzes" min="0" max="150">%
+            <br />
+            <br />
+            <label>Exams</label>
+            <input type="number" id="exams" min="0" max="150">%
+            <br />
+            <br />
+            <label>INTEX</label>
+            <input type="number" id="intex" min="0" max="150">%
+            <script src="../js/index.js"></script>
+            <br />
+            <br />
+            <input type="button" id="submit" value="Calculate Grade" onclick="calculateGrade()" />
+        </form>
+        <div id="sub">
+            <em>Your grade this semester:</em>
+            <h1 id="letterOutput"></h1>
+            <h1 id="gradeOutput"></h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿#grade {
+    display:flex;
+}
+
+h1#gradeOutput, h1#letterOutput, #sub > em {
+    padding-left: 50px;
+}
+
+sub {
+    display:flex
+}
