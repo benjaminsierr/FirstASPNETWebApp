@@ -44,7 +44,7 @@ function calculateGrade() {
         letter = 'D-'
     }
     else {
-        letter = E
+        letter = 'E'
     }
     //output letter grade
     document.getElementById('letterOutput').innerHTML = letter;
