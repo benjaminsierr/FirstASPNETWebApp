@@ -1,13 +1,15 @@
 ﻿//onclick function
-function calculateGrade() {
+var submit = $("submit");
+
+submit.addEventListener("click", function () {
     //debug for grades
-    console.log(document.getElementById('assignments').value);
-    console.log(document.getElementById('group').value);
-    console.log(document.getElementById('quizzes').value);
-    console.log(document.getElementById('exams').value);
-    console.log(document.getElementById('intex').value);
+    console.log($('assignments').value);
+    console.log($('group').value);
+    console.log($('quizzes').value);
+    console.log($('exams').value);
+    console.log($('intex').value);
     //caluclate grade
-    let grade = document.getElementById('assignments').value * .5 + document.getElementById('group').value * .1 + document.getElementById('quizzes').value * .1 + document.getElementById('exams').value * .2 + document.getElementById('intex').value * .1;
+    let grade = $('assignments').value * .5 + $('group').value * .1 + $('quizzes').value * .1 + $('exams').value * .2 + $('intex').value * .1;
     let letter;
     //determine letter grade
     if (grade >= 94) {
@@ -49,5 +51,5 @@ function calculateGrade() {
     //output letter grade
     document.getElementById('letterOutput').innerHTML = letter;
     //output numeric grade
-    document.getElementById('gradeOutput').innerHTML =grade + '%';
-}
+    document.getElementById('gradeOutput').innerHTML = parseInt(grade).toFixed(2) + '%';
+});
