@@ -1,15 +1,15 @@
 ﻿//onclick function
-var submit = $("submit");
-
-submit.addEventListener("click", function () {
+$("#submit").click(function () {
     //debug for grades
-    console.log($('assignments').value);
-    console.log($('group').value);
-    console.log($('quizzes').value);
-    console.log($('exams').value);
-    console.log($('intex').value);
+    //alert(
+        //$("#assignments").val() + '\n' +
+        //$("#group").val() + '\n' +
+        //$("#quizzes").val() + '\n' +
+        //$("#exams").val() + '\n' +
+        //$("#intex").val() + '\n'
+    //);
     //caluclate grade
-    let grade = $('assignments').value * .5 + $('group').value * .1 + $('quizzes').value * .1 + $('exams').value * .2 + $('intex').value * .1;
+    let grade = $("#assignments").val() * .5 + $("#group").val() * .1 + $('#quizzes').val() * .1 + $('#exams').val() * .2 + $('#intex').val() * .1;
     let letter;
     //determine letter grade
     if (grade >= 94) {
@@ -52,4 +52,6 @@ submit.addEventListener("click", function () {
     document.getElementById('letterOutput').innerHTML = letter;
     //output numeric grade
     document.getElementById('gradeOutput').innerHTML = parseInt(grade).toFixed(2) + '%';
+    alert("Your grade this semester\n" + letter + '\n' + grade + '%');
+    
 });

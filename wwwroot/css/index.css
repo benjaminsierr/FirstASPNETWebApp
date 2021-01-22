@@ -29,3 +29,13 @@ img {
 sub {
     display:flex
 }
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-right: 25px;
+    font-size: 1.5rem;
+}
