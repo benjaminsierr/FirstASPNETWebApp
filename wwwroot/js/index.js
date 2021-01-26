@@ -51,7 +51,10 @@ $("#submit").click(function () {
     //output letter grade
     document.getElementById('letterOutput').innerHTML = letter;
     //output numeric grade
-    document.getElementById('gradeOutput').innerHTML = parseInt(grade).toFixed(2) + '%';
-    alert("Your grade this semester\n" + letter + '\n' + grade + '%');
-    
+    //document.getElementById('gradeOutput').innerHTML = parseInt(grade).toFixed(2) + '%';
+    output = "Your grade this semester\n" + letter + '\n' + grade + '%'
+    //alert("Your grade this semester\n" + letter + '\n' + grade + '%');
+    console.log(output);
+    window.localStorage.setItem('grade', grade + '');
+    window.localStorage.setItem('letter', letter);
 });

@@ -6,7 +6,6 @@
 }
 
 @model FirstASPNETWebApp.Models.GradeModel
-
 <body>
     <div id="grade">
         <form method="post">
@@ -41,6 +40,15 @@
             <em>Your grade this semester:</em>
             <h1 id="letterOutput"></h1>
             <h1 id="gradeOutput"></h1>
+            @if (ViewData.ModelState.IsValid)
+            {
+                <script>
+                    document.getElementById('letterOutput').innerHTML = window.localStorage.getItem('letter');
+                    document.getElementById('gradeOutput').innerHTML = window.localStorage.getItem('grade');
+                    window.localStorage.clear();
+                </script>
+            }
+
         </div>
     </div>
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
